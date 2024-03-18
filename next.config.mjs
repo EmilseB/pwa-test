@@ -1,4 +1,3 @@
-import { defineConfig } from 'next/dist/next-server/server/config-shared';
 import withPWAInit from "@ducanh2912/next-pwa";
 
 const nextConfig = {
