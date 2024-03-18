@@ -1,7 +1,7 @@
-// pages/index.js
-import { useEffect, useState } from 'react';
+// InstallBanner.tsx
+import { useState, useEffect } from 'react';
 
-const Home: React.FC = () => {
+const InstallBanner: React.FC = () => {
   const [deferredPrompt, setDeferredPrompt] = useState<any | null>(null);
   const [showBanner, setShowBanner] = useState<boolean>(false);
 
@@ -38,32 +38,14 @@ const Home: React.FC = () => {
   };
 
   return (
-    <div>
-      {showBanner && (
-        <div style={{ position: 'fixed', bottom: 0, left: 0, width: '100%', backgroundColor: '#f0f0f0', padding: '10px', textAlign: 'center' }}>
-          <p>¡Instala nuestra aplicación para acceder más fácilmente!</p>
-          <button onClick={handleInstallClick}>Instalar</button>
-          <button onClick={handleDismissClick}>Cerrar</button>
-        </div>
-      )}
-
-      <div
-        style={{
-          width: "100%",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          marginTop: 50,
-          flexDirection: "column",
-        }}
-      >
-        <p>Hola mundo</p>
-        <div style={{ marginTop:10}}>
-          <button onClick={() => alert("Bienvenidos")}>click aqui</button>
-        </div>
+    showBanner && (
+      <div style={{ position: 'fixed', bottom: 0, left: 0, width: '100%', backgroundColor: '#f0f0f0', padding: '10px', textAlign: 'center' }}>
+        <p>¡Instala nuestra aplicación para acceder más fácilmente!</p>
+        <button onClick={handleInstallClick}>Instalar</button>
+        <button onClick={handleDismissClick}>Cerrar</button>
       </div>
-    </div>
+    )
   );
 };
 
-export default Home;
+export default InstallBanner;
