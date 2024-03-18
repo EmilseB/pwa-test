@@ -1,14 +1,13 @@
-/** @type {import('next').NextConfig} */
+import { defineConfig } from 'next/dist/next-server/server/config-shared';
+import withPWAInit from "@ducanh2912/next-pwa";
+
 const nextConfig = {
   reactStrictMode: true,
 };
-import withPWAInit from "@ducanh2912/next-pwa";
 
-const withPWA = withPWAInit({
-  dest: "public",
+export default withPWAInit({
+  pwa: {
+    dest: "public",
+  },
+  ...nextConfig,
 });
-
-export default withPWA({
-  nextConfig
-});
-
