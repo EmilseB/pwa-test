@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 
 const Home: React.FC = () => {
   const [deferredPrompt, setDeferredPrompt] = useState<any | null>(null);
-  const [showBanner, setShowBanner] = useState<boolean>(false);
+  const [showBanner, setShowBanner] = useState<boolean>(true);
 
   useEffect(() => {
     const handleBeforeInstallPrompt = (e: any) => {
